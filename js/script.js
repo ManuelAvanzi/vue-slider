@@ -1,6 +1,5 @@
 new Vue ({
     el:"#app",
-    data:{
-        message:"Vue slider",
-    }
+    data:{},
+    methods:{},
 })
