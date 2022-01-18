@@ -2,7 +2,58 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body{
-    background-color: teal;
+    background-color: rgb(27, 135, 139);
+}
+
+.slider-container{
+    
+    width: 60vw;
+    height: 80vh;
+    border:1px solid grey;
+    margin:50px auto;
+    margin-bottom: 5px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+img{
+    width: 60vw;
+    height: 80vh;
+}
+.arrow{
+    font-size: 40px;
+    color:white;
+    
+
+}
+.left{
+    position:absolute;
+    top:50%;
+    left: 10%;
+}
+.right{
+    position: absolute;
+    top:50%;
+    right: 10%;
+}
+.navigation-container{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    margin: 0 auto;
+    height: 50px;
+ 
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    background-color: salmon;
+    border-radius: 50%;
+    float: left;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.circle,.arrow{
+    cursor: pointer;
 }

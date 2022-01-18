@@ -1,5 +1,68 @@
 new Vue ({
     el:"#app",
-    data:{},
-    methods:{},
-})
+    data:{
+        currentIndex:0,
+        immagini:[
+            {
+                titolo:"Marte",
+                img:"./img/marte.jpg"
+            },
+            {
+                titolo:"Nettuno",
+                img:"./img/nettuno.jpg"
+            },
+            {
+                titolo:"Proxima",
+                img:"./img/proxima.jpg"
+            },
+            {
+                titolo:"Saturno",
+                img:"./img/Saturno.jpg"
+            },
+            {
+                titolo:"venere",
+                img:"./img/venere.jpg",
+            }
+
+        ],
+        timer:null,
+        Over:false,
+    },
+    methods:{
+        next:function(){
+            if(this.currentIndex>=this.immagini.length-1){
+                this.currentIndex=0;
+            }else{
+                this.currentIndex++;
+            }    
+            console.log(this.currentIndex);       
+        },
+        prev:function(){
+            if(this.currentIndex<=0){
+                this.currentIndex=this.immagini.length-1;
+            }else{
+                this.currentIndex--;
+            }  
+            console.log(this.currentIndex);
+        },
+        autoPlay:function(){
+            let time=this;
+            this.timer=setInterval( ()=>{
+               this.next();
+            },3000);
+            },
+
+        },
+        /*mouseOver:function(){
+            this.over=true;
+            clearInterval(this.timer);
+        },
+        mouseLeave:function(){
+            this;
+            this.autoPlay();
+        },*/
+        mounted:function(){
+            this.autoPlay();
+        },
+    },
+);
